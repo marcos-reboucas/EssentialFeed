@@ -34,14 +34,13 @@ final class FeedViewControllerTests: XCTestCase {
         XCTAssertTrue(sut.isShowingLoaderIndicator, "Expected loading indicator once view is loaded")
     
         loader.completeFeedLoading(at: 0)
-        XCTAssertFalse(sut.isShowingLoaderIndicator,"Expected no loading indicator once loading is complete")
+        XCTAssertFalse(sut.isShowingLoaderIndicator,"Expected no loading indicator once loading completes successfully")
         
         sut.simulateUserInitiatedFeedReload()
         XCTAssertTrue(sut.isShowingLoaderIndicator, "Expected loading indicator once user initiates a reload")
         
-        sut.simulateUserInitiatedFeedReload()
-        loader.completeFeedLoading(at: 1)
-        XCTAssertFalse(sut.isShowingLoaderIndicator, "Expected no loading indicator once user initiated loading is completed")
+        loader.completeFeedLoadingWithError(at: 1)
+        XCTAssertFalse(sut.isShowingLoaderIndicator, "Expected no loading indicator once user initiated loading completes with error")
     }
     
     func test_loadFeedCompletion_rendersSuccessfullyLoadedFeed() {
