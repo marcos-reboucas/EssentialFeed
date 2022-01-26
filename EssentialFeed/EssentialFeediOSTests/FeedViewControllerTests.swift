@@ -153,6 +153,7 @@ final class FeedViewControllerTests: XCTestCase {
             feedRequests[index](.failure(error))
         }
         
+        
         // MARK: - FeedImageDataLoader
         
         private(set) var loadedImageURLs = [URL]()
