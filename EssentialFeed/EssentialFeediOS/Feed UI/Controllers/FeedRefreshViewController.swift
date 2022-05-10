@@ -10,8 +10,10 @@ import EssentialFeed
 
 // The goal is to move the UIRefreshControl() creation, configuration and loading logic to another controller type (instead of having it on FeedViewController).
 
+// private(set) - var can only be modified from inside the class FeedRefreshViewController
+
 final class FeedRefreshViewController: NSObject {
-    private(set) var view: UIRefreshControl =  {
+    private(set) lazy var view: UIRefreshControl =  {
         let view = UIRefreshControl()
         view.addTarget(self, action: #selector(refresh), for: .valueChanged)
         return view
