@@ -5,8 +5,9 @@
 //  Created by Marcos Reboucas on 17/12/21.
 //
 
+// FeedViewController does not communicate with any EssentialFeed core component, none of it's responsibilities is about managing model state so in this case it doesn't need a view model.
+
 import UIKit
-import EssentialFeed
 
 final public class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching {
     private var refreshController: FeedRefreshViewController?
