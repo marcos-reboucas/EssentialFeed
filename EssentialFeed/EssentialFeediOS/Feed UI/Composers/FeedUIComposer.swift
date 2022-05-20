@@ -29,6 +29,7 @@ public final class FeedUIComposer {
     }
 }
 
+// Here we move memory management to Composer layer. Because the FeedPresenter shouldn't have to know or handle their dependencies lifetime.
 // The virtual proxy will hold a weak reference to the object instance and pass the message forward, so when we set the loadingView (line 18) we weakfy it with the virtual proxy. To make it works we need to make WeakRefVirtualProxy conform to FeedLoadingView in the extension below.
 private final class WeakRefVirtualProxy<T: AnyObject> {
     private weak var object: T?
@@ -43,6 +44,8 @@ extension WeakRefVirtualProxy: FeedLoadingView where T: FeedLoadingView {
         object?.display(isLoading: isLoading)
     }
 }
+
+// OBS: Antes passavamos o FeedRefreshViewController direto para o FeedPresenter, dai tinha que tornar essa referencia weak em FeedPresenter. Como o FeedPresenter nao tem que gerenciar o ciclo de vida de suas dependencias, agora passamos WeakRefVirtualProxy com o FeedRefreshViewController dentro para o FeedPresenter. Assim agora quando FeedPresenter chama loadingView?.display(isLoading: true) ele esta chamando em WeakRefVirtualProxy, que chama em FeedRefreshViewController. Isso resolve o retain cycle que existia sem que o FeedPresenter tenha que se preocupar com isso.
 
 private final class FeedViewAdapter: FeedView {
     private weak var controller: FeedViewController?
