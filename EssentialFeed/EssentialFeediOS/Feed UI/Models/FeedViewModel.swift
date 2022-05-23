@@ -5,6 +5,8 @@
 //  Created by Marcos Reboucas on 12/05/22.
 //
 
+// Esta classe FeedViewModel não está sendo usada mais na última implementação em MVP com o FeedPresenter, deixei aqui apenas pelo exemplo de Observer genérico com closure que notifica e passa valores para outros objetos.
+
 import Foundation
 import EssentialFeed
 
