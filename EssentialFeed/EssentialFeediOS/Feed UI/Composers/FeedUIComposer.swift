@@ -15,21 +15,15 @@ public final class FeedUIComposer {
         let presentationAdapter = FeedLoaderPresentationAdapter(feedLoader: feedLoader)
         let refreshController = FeedRefreshViewController(delegate: presentationAdapter)
         let feedController = FeedViewController(refreshController: refreshController)
-        presentationAdapter.presenter = FeedPresenter(feedView: FeedViewAdapter(controller: feedController, imageLoader: imageLoader), loadingView: WeakRefVirtualProxy(refreshController))
+        
+        presentationAdapter.presenter = FeedPresenter(
+            feedView: FeedViewAdapter(controller: feedController, imageLoader: imageLoader),
+            loadingView: WeakRefVirtualProxy(refreshController))
+        
         return feedController
-    }
-    
-    private static func adaptFeedToCellControllers(forwardingTo controller: FeedViewController, loader: FeedImageDataLoader) -> ([FeedImage]) -> Void {
-        return { [weak controller] feed in
-            controller?.tableModel = feed.map { model in
-                FeedImageCellController(viewModel: FeedImageViewModel(model: model, imageLoader: loader, imageTransformer: UIImage.init))
-            }
-        }
     }
 }
 
-// Here we move memory management to Composer layer. Because the FeedPresenter shouldn't have to know or handle their dependencies lifetime.
-// The virtual proxy will hold a weak reference to the object instance and pass the message forward, so when we set the loadingView (line 18) we weakfy it with the virtual proxy. To make it works we need to make WeakRefVirtualProxy conform to FeedLoadingView in the extension below.
 private final class WeakRefVirtualProxy<T: AnyObject> {
     private weak var object: T?
     
@@ -44,7 +38,11 @@ extension WeakRefVirtualProxy: FeedLoadingView where T: FeedLoadingView {
     }
 }
 
-// OBS: Antes passavamos o FeedRefreshViewController direto para o FeedPresenter, dai tinha que tornar essa referencia weak em FeedPresenter. Como o FeedPresenter nao tem que gerenciar o ciclo de vida de suas dependencias, agora passamos WeakRefVirtualProxy com o FeedRefreshViewController dentro para o FeedPresenter. Assim agora quando FeedPresenter chama loadingView?.display(isLoading: true) ele esta chamando em WeakRefVirtualProxy, que chama em FeedRefreshViewController. Isso resolve o retain cycle que existia sem que o FeedPresenter tenha que se preocupar com isso.
+extension WeakRefVirtualProxy: FeedImageView where T: FeedImageView, T.Image == UIImage {
+    func display(_ model: FeedImageViewModel<UIImage>) {
+        object?.display(model)
+    }
+}
 
 private final class FeedViewAdapter: FeedView {
     private weak var controller: FeedViewController?
@@ -57,7 +55,14 @@ private final class FeedViewAdapter: FeedView {
     
     func display(_ viewModel: FeedViewModel) {
         controller?.tableModel = viewModel.feed.map { model in
-            FeedImageCellController(viewModel: FeedImageViewModel(model: model, imageLoader: imageLoader, imageTransformer: UIImage.init))
+            let adapter = FeedImageDataLoaderPresentationAdapter<WeakRefVirtualProxy<FeedImageCellController>, UIImage>(model: model, imageLoader: imageLoader)
+            let view = FeedImageCellController(delegate: adapter)
+            
+            adapter.presenter = FeedImagePresenter(
+                view: WeakRefVirtualProxy(view),
+                imageTransformer: UIImage.init)
+            
+            return view
         }
     }
 }
@@ -81,7 +86,38 @@ private final class FeedLoaderPresentationAdapter: FeedRefreshViewControllerDele
             case let .failure(error):
                 self?.presenter?.didFinishLoadingFeed(with: error)
             }
-            
         }
+    }
+}
+
+private final class FeedImageDataLoaderPresentationAdapter<View: FeedImageView, Image>: FeedImageCellControllerDelegate where View.Image == Image {
+    private let model: FeedImage
+    private let imageLoader: FeedImageDataLoader
+    private var task: FeedImageDataLoaderTask?
+    
+    var presenter: FeedImagePresenter<View, Image>?
+    
+    init(model: FeedImage, imageLoader: FeedImageDataLoader) {
+        self.model = model
+        self.imageLoader = imageLoader
+    }
+    
+    func didRequestImage() {
+        presenter?.didStartLoadingImageData(for: model)
+        
+        let model = self.model
+        task = imageLoader.loadImageData(from: model.url) { [weak self] result in
+            switch result {
+            case let .success(data):
+                self?.presenter?.didFinishLoadingImageData(with: data, for: model)
+                
+            case let .failure(error):
+                self?.presenter?.didFinishLoadingImageData(with: error, for: model)
+            }
+        }
+    }
+    
+    func didCancelImageRequest() {
+        task?.cancel()
     }
 }
