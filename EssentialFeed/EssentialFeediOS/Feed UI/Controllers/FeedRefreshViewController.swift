@@ -11,6 +11,8 @@ import UIKit
 
 // private(set) - var can only be modified from inside the class FeedRefreshViewController
 
+// Esta class FeedRefreshViewController (e o delegate FeedRefreshViewControllerDelegate) não está mais sendo usada no app, fizemos o merge dela com FeedViewController quando refatoramos para usar Storyboard: Merge FeedRefreshViewController with FeedViewController since the `UIRefreshControl` creation and configuration now lives in the Storyboard
+
 protocol FeedRefreshViewControllerDelegate {
     func didRequestFeedRefresh()
 }
