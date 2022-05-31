@@ -77,6 +77,9 @@
                                                             <state key="normal" title="⟳">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="retryButtonTapped" destination="CNe-ci-W5c" eventType="touchUpInside" id="goK-KD-iGq"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -118,6 +121,14 @@
                                         <constraint firstItem="vkI-AG-H70" firstAttribute="leading" secondItem="njm-iL-ppH" secondAttribute="leadingMargin" id="xQQ-yv-qoE"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="wSf-8t-odl" id="8Fs-Vv-prV"/>
+                                    <outlet property="feedImageContainer" destination="uZk-Ua-XyD" id="d8g-bK-VJr"/>
+                                    <outlet property="feedImageRetryButton" destination="g5i-l6-KIn" id="jSa-Fa-70u"/>
+                                    <outlet property="feedImageView" destination="zk7-Th-0RE" id="3Z0-3O-LAm"/>
+                                    <outlet property="locationContainer" destination="WRv-Cs-YIE" id="KgT-Lc-q0l"/>
+                                    <outlet property="locationLabel" destination="AVX-N9-LEs" id="dYz-na-cvg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
