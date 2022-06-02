@@ -39,7 +39,7 @@
 		044E9757283E677F008C9048 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044E9756283E677F008C9048 /* Feed.xcassets */; };
 		044F46C2276CDDCB0035E0C9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F46C1276CDDCB0035E0C9 /* FeedViewController.swift */; };
 		044F46C4277230280035E0C9 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F46C3277230280035E0C9 /* FeedImageCell.swift */; };
-		04596A06274D0E6E00447AE1 /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04596A05274D0E6E00447AE1 /* FeedViewControllerTests.swift */; };
+		04596A06274D0E6E00447AE1 /* FeedUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04596A05274D0E6E00447AE1 /* FeedUIIntegrationTests.swift */; };
 		04596A08274E740400447AE1 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3C9D14261C8901007E595F /* EssentialFeed.framework */; platformFilter = ios; };
 		04596A09274E740400447AE1 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3C9D14261C8901007E595F /* EssentialFeed.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04596A0D274E797700447AE1 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CF03B2642B96700D07D4C /* XCTestCase+MemoryLeakTracking.swift */; };
@@ -162,7 +162,7 @@
 		044E9756283E677F008C9048 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		044F46C1276CDDCB0035E0C9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		044F46C3277230280035E0C9 /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
-		04596A05274D0E6E00447AE1 /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
+		04596A05274D0E6E00447AE1 /* FeedUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTests.swift; sourceTree = "<group>"; };
 		0461601A2728547800D1E55F /* EssentialFeedCacheIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedCacheIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0461601C2728547800D1E55F /* EssentialFeedCacheIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedCacheIntegrationTests.swift; sourceTree = "<group>"; };
 		046820E226DE913C00EF986C /* CodableFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStore.swift; sourceTree = "<group>"; };
@@ -303,18 +303,10 @@
 		041054E527B2E3C600C0B102 /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
-				041054E627B2E3D400C0B102 /* Controllers */,
+				041054E727B2E3E200C0B102 /* Helpers */,
+				04596A05274D0E6E00447AE1 /* FeedUIIntegrationTests.swift */,
 			);
 			path = "Feed UI";
-			sourceTree = "<group>";
-		};
-		041054E627B2E3D400C0B102 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				041054E727B2E3E200C0B102 /* Helpers */,
-				04596A05274D0E6E00447AE1 /* FeedViewControllerTests.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		041054E727B2E3E200C0B102 /* Helpers */ = {
@@ -811,7 +803,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04596A06274D0E6E00447AE1 /* FeedViewControllerTests.swift in Sources */,
+				04596A06274D0E6E00447AE1 /* FeedUIIntegrationTests.swift in Sources */,
 				04596A0D274E797700447AE1 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				04EF37832848F43D00E92934 /* FeedViewControllerTests+Localization.swift in Sources */,
 			);
