@@ -437,7 +437,7 @@ private extension FeedViewController {
     }
     
     var errorMessage: String? {
-        return errorView.message
+        return errorView?.message
     }
     
     var isShowingLoaderIndicator: Bool {
