@@ -27,6 +27,7 @@
 		042D38DE27199849005D5CEB /* CoreDataFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D38DD27199849005D5CEB /* CoreDataFeedStoreTests.swift */; };
 		042D38E227199D2A005D5CEB /* CoreDataFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D38E127199D2A005D5CEB /* CoreDataFeedStore.swift */; };
 		042D38E52719A46C005D5CEB /* FeedStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 042D38E32719A46C005D5CEB /* FeedStore.xcdatamodeld */; };
+		04340FE028635EA8008772AE /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04340FE228635EA8008772AE /* Feed.strings */; };
 		044E9742282A999F008C9048 /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9741282A999E008C9048 /* FeedImageCellController.swift */; };
 		044E9745282AA5AC008C9048 /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9744282AA5AC008C9048 /* FeedUIComposer.swift */; };
 		044E9748282D5A49008C9048 /* FeedViewModel_Unused.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044E9747282D5A48008C9048 /* FeedViewModel_Unused.swift */; };
@@ -160,6 +161,9 @@
 		042D38DD27199849005D5CEB /* CoreDataFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStoreTests.swift; sourceTree = "<group>"; };
 		042D38E127199D2A005D5CEB /* CoreDataFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStore.swift; sourceTree = "<group>"; };
 		042D38E42719A46C005D5CEB /* FeedStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedStore.xcdatamodel; sourceTree = "<group>"; };
+		04340FE128635EA8008772AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
+		04340FE328635EAA008772AE /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
+		04340FE428635EAC008772AE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
 		044E9741282A999E008C9048 /* FeedImageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCellController.swift; sourceTree = "<group>"; };
 		044E9744282AA5AC008C9048 /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
 		044E9747282D5A48008C9048 /* FeedViewModel_Unused.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel_Unused.swift; sourceTree = "<group>"; };
@@ -503,6 +507,7 @@
 			isa = PBXGroup;
 			children = (
 				04EF37B7285374EA00E92934 /* FeedPresenterTests.swift */,
+				04340FE228635EA8008772AE /* Feed.strings */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -828,6 +833,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04340FE028635EA8008772AE /* Feed.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -976,6 +982,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		04340FE228635EA8008772AE /* Feed.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04340FE128635EA8008772AE /* en */,
+				04340FE328635EAA008772AE /* el */,
+				04340FE428635EAC008772AE /* pt-BR */,
+			);
+			name = Feed.strings;
+			sourceTree = "<group>";
+		};
 		04EF37862848F83100E92934 /* Feed.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
