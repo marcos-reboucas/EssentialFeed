@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EssentialFeed
 
 // The goal is to move the UIRefreshControl() creation, configuration and loading logic to another controller type (FeedRefreshViewController), instead of having it on FeedViewController.
 
