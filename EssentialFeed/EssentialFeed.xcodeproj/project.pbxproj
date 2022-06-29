@@ -65,6 +65,7 @@
 		04CBFCC2268A927000731145 /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBFCC1268A927000731145 /* FeedCachePolicy.swift */; };
 		04CBFCC42694B7DD00731145 /* CodableFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBFCC32694B7DD00731145 /* CodableFeedStoreTests.swift */; };
 		04E92317286B32730086D5BF /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041054EA27B2E5F600C0B102 /* FeedImageDataLoader.swift */; };
+		04E92319286C79CC0086D5BF /* RemoteFeedImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E92318286C79CC0086D5BF /* RemoteFeedImageDataLoaderTests.swift */; };
 		04EF375D28465B6600E92934 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF375C28465B6600E92934 /* UITableView+Dequeueing.swift */; };
 		04EF375F28465DF800E92934 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF375E28465DF800E92934 /* UIImageView+Animations.swift */; };
 		04EF37832848F43D00E92934 /* FeedViewControllerTests+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF37822848F43D00E92934 /* FeedViewControllerTests+Localization.swift */; };
@@ -193,6 +194,7 @@
 		04B950DB27A423A000EDE1CD /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		04CBFCC1268A927000731145 /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
 		04CBFCC32694B7DD00731145 /* CodableFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStoreTests.swift; sourceTree = "<group>"; };
+		04E92318286C79CC0086D5BF /* RemoteFeedImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoaderTests.swift; sourceTree = "<group>"; };
 		04EF375C28465B6600E92934 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
 		04EF375E28465DF800E92934 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
 		04EF37822848F43D00E92934 /* FeedViewControllerTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Localization.swift"; sourceTree = "<group>"; };
@@ -513,6 +515,7 @@
 			children = (
 				8D3C9D48261C8AEB007E595F /* LoadFeedFromRemoteUseCaseTests.swift */,
 				8D2C054726319D1C00C0201C /* URLSessionHTTPClientTests.swift */,
+				04E92318286C79CC0086D5BF /* RemoteFeedImageDataLoaderTests.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -918,6 +921,7 @@
 				04CBFCC42694B7DD00731145 /* CodableFeedStoreTests.swift in Sources */,
 				0422FD74267A466200F39231 /* FeedCacheTestHelpers.swift in Sources */,
 				04340FEF2864ACF0008772AE /* FeedLocalizationTests.swift in Sources */,
+				04E92319286C79CC0086D5BF /* RemoteFeedImageDataLoaderTests.swift in Sources */,
 				0422FD72267968C700F39231 /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				8D3C9D49261C8AEB007E595F /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				8D2C054826319D1C00C0201C /* URLSessionHTTPClientTests.swift in Sources */,
@@ -1315,11 +1319,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X94QAJPYE3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1346,11 +1350,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X94QAJPYE3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
