@@ -109,3 +109,7 @@ class RemoteFeedImageDataLoaderTests: XCTestCase {
         }
     }
 }
+
+// Ele cria o array de tuples 'messages' que tem uma referencia ao result 'completion'.
+// Ao chamar 'get' ele cria uma referencia entre o completion da chamada 'get' e o completion do array 'messages'.
+// Ao chamar 'complete' e colocar o 'error' no array 'messages' ele tambem coloca o 'error' no  completion da chamada get automaticamente (reference type).
