@@ -108,6 +108,12 @@ class LocalFeedImageDataLoaderTests: XCTestCase {
         
         var received = [FeedImageDataLoader.Result]()
         let task = sut.loadImageData(from: anyURL()) { received.append($0) }
+        
+        // Example implementing the completion closure passsing named parameter 'result' instead of $0
+//        let t = sut.loadImageData(from: anyURL()) { result in
+//            received.append(result)
+//        }
+        
         task.cancel()
         
         store.complete(with: foundData)
