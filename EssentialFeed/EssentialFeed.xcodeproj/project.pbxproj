@@ -66,7 +66,7 @@
 		04CBFCC42694B7DD00731145 /* CodableFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBFCC32694B7DD00731145 /* CodableFeedStoreTests.swift */; };
 		04D7C24F288592680070A6AD /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7C24E288592680070A6AD /* HTTPURLResponse+StatusCode.swift */; };
 		04D7C2512885950E0070A6AD /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7C2502885950E0070A6AD /* URLProtocolStub.swift */; };
-		04D7C2532885999F0070A6AD /* LocalFeedImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7C2522885999F0070A6AD /* LocalFeedImageDataLoaderTests.swift */; };
+		04D7C2532885999F0070A6AD /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7C2522885999F0070A6AD /* LoadFeedImageDataFromCacheUseCaseTests.swift */; };
 		04D7C255289948090070A6AD /* FeedImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7C254289948080070A6AD /* FeedImageDataStore.swift */; };
 		04D7C257289948980070A6AD /* LocalFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7C256289948980070A6AD /* LocalFeedImageDataLoader.swift */; };
 		04E92317286B32730086D5BF /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041054EA27B2E5F600C0B102 /* FeedImageDataLoader.swift */; };
@@ -203,7 +203,7 @@
 		04CBFCC32694B7DD00731145 /* CodableFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStoreTests.swift; sourceTree = "<group>"; };
 		04D7C24E288592680070A6AD /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		04D7C2502885950E0070A6AD /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
-		04D7C2522885999F0070A6AD /* LocalFeedImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoaderTests.swift; sourceTree = "<group>"; };
+		04D7C2522885999F0070A6AD /* LoadFeedImageDataFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		04D7C254289948080070A6AD /* FeedImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataStore.swift; sourceTree = "<group>"; };
 		04D7C256289948980070A6AD /* LocalFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		04E92318286C79CC0086D5BF /* LoadFeedImageDataFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
@@ -378,7 +378,7 @@
 				0422FD71267968C700F39231 /* ValidateFeedCacheUseCaseTests.swift */,
 				04CBFCC32694B7DD00731145 /* CodableFeedStoreTests.swift */,
 				042D38DD27199849005D5CEB /* CoreDataFeedStoreTests.swift */,
-				04D7C2522885999F0070A6AD /* LocalFeedImageDataLoaderTests.swift */,
+				04D7C2522885999F0070A6AD /* LoadFeedImageDataFromCacheUseCaseTests.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -969,7 +969,7 @@
 				8D2C054826319D1C00C0201C /* URLSessionHTTPClientTests.swift in Sources */,
 				0422FD702667C69600F39231 /* FeedStoreSpy.swift in Sources */,
 				04EF37B8285374EA00E92934 /* FeedPresenterTests.swift in Sources */,
-				04D7C2532885999F0070A6AD /* LocalFeedImageDataLoaderTests.swift in Sources */,
+				04D7C2532885999F0070A6AD /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */,
 				04E9231C287F1F3E0086D5BF /* HTTPClientSpy.swift in Sources */,
 				046820F0270F51B700EF986C /* FeedStoreSpecs.swift in Sources */,
 				0422FD76267A47F600F39231 /* SharedTestHelpers.swift in Sources */,
