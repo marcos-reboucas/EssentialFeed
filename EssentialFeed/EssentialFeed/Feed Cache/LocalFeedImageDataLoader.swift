@@ -23,8 +23,20 @@ extension LocalFeedImageDataLoader {
         case failed
     }
     
+    struct DatedError: Error {
+        var error: Error
+        var date: Date
+
+        init(_ error: Error) {
+            self.error = error
+            self.date = Date()
+        }
+    }
+    
     public func save(_ data: Data, for url: URL, completion: @escaping (SaveResult) -> Void) {
-        store.insert(data, for: url) { result in completion(.failure(SaveError.failed)) }
+        store.insert(data, for: url) { result in
+            completion(result.mapError { _ in SaveError.failed })
+        }
     }
 }
 
