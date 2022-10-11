@@ -23,6 +23,7 @@
 		047EB0E628D9FEBA009C47FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047EB0E428D9FEBA009C47FD /* Main.storyboard */; };
 		047EB0E828D9FEBB009C47FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047EB0E728D9FEBB009C47FD /* Assets.xcassets */; };
 		047EB0EB28D9FEBB009C47FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047EB0E928D9FEBB009C47FD /* LaunchScreen.storyboard */; };
+		04D01E1528F5AFC600E3C144 /* FeedLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D01E1428F5AFC600E3C144 /* FeedLoaderCacheDecoratorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		047EB0E728D9FEBB009C47FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047EB0EA28D9FEBB009C47FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		047EB0EC28D9FEBB009C47FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04D01E1428F5AFC600E3C144 /* FeedLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				0477E22628DDE071000ACB9E /* Helpers */,
 				0477E21F28DCAA6A000ACB9E /* FeedLoaderWithFallbackCompositeTests.swift */,
 				0477E22D28E5E72E000ACB9E /* FeedImageDataLoaderWithFallbackCompositeTests.swift */,
+				04D01E1428F5AFC600E3C144 /* FeedLoaderCacheDecoratorTests.swift */,
 			);
 			path = EssentialAppTests;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0477E23028EF3B4E000ACB9E /* SharedTestHelpers.swift in Sources */,
+				04D01E1528F5AFC600E3C144 /* FeedLoaderCacheDecoratorTests.swift in Sources */,
 				0477E22028DCAA6A000ACB9E /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
 				0477E22E28E5E72F000ACB9E /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */,
 				0477E22828DDE0B0000ACB9E /* XCTestCase+MemoryLeakTracking.swift in Sources */,
