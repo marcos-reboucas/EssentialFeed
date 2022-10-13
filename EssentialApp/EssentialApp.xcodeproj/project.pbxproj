@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0457D1DD28F862EC00DFD9BF /* FeedLoaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457D1DC28F862EC00DFD9BF /* FeedLoaderStub.swift */; };
 		0477E22028DCAA6A000ACB9E /* FeedLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477E21F28DCAA6A000ACB9E /* FeedLoaderWithFallbackCompositeTests.swift */; };
 		0477E22328DDD8EE000ACB9E /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0477E22228DDD8EE000ACB9E /* EssentialFeed.framework */; };
 		0477E22428DDD8EE000ACB9E /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0477E22228DDD8EE000ACB9E /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -52,6 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0457D1DC28F862EC00DFD9BF /* FeedLoaderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderStub.swift; sourceTree = "<group>"; };
 		0477E21628DCAA05000ACB9E /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0477E21F28DCAA6A000ACB9E /* FeedLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
 		0477E22228DDD8EE000ACB9E /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 			children = (
 				0477E22728DDE0B0000ACB9E /* XCTestCase+MemoryLeakTracking.swift */,
 				0477E22F28EF3B4E000ACB9E /* SharedTestHelpers.swift */,
+				0457D1DC28F862EC00DFD9BF /* FeedLoaderStub.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				04D01E1528F5AFC600E3C144 /* FeedLoaderCacheDecoratorTests.swift in Sources */,
 				0477E22028DCAA6A000ACB9E /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
 				0477E22E28E5E72F000ACB9E /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */,
+				0457D1DD28F862EC00DFD9BF /* FeedLoaderStub.swift in Sources */,
 				0477E22828DDE0B0000ACB9E /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
