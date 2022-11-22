@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import EssentialAppTests
 
 class EssentialAppUIAcceptanceTests: XCTestCase {
     
