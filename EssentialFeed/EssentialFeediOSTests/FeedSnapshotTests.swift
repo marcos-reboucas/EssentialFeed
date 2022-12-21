@@ -32,7 +32,7 @@ class FeedSnapshotTests: XCTestCase {
         return []
     }
     
-    private func record(snapshot: UIImage, named: String, file: StaticString = #file, line: UInt = #line) {
+    private func record(snapshot: UIImage, named name: String, file: StaticString = #file, line: UInt = #line) {
         guard let snapshotData = snapshot.pngData() else {
             XCTFail("Failed to generate PNG data from snapshot", file: file, line: line)
             return
