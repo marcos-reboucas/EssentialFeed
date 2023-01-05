@@ -27,6 +27,14 @@ class FeedSnapshotTests: XCTestCase {
         record(snapshot: sut.snapshot(), named: "FEED_WITH_CONTENT")
     }
     
+    func test_feedWithErrorMessage() {
+        let sut = makeSUT()
+        
+        sut.display(.error(message: "This is a\nmulti-line\nerror message"))
+        
+        record(snapshot: sut.snapshot(), named: "FEED_WITH_ERROR_MESSAGE")
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT() -> FeedViewController {
@@ -90,6 +98,9 @@ extension UIViewController {
         }
     }
 }
+
+
+// Abaixo essa extension de FeedViewController (sut) cria o datasource de [FeedImageCellController] usando o ViewModel criado em ImageStub e mostra na tela em display(cells):
 
 private extension FeedViewController {
     func display(_ stubs: [ImageStub]) {
