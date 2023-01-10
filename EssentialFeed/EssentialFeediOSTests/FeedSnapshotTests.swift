@@ -35,6 +35,14 @@ class FeedSnapshotTests: XCTestCase {
         record(snapshot: sut.snapshot(), named: "FEED_WITH_ERROR_MESSAGE")
     }
     
+    func test_feedWithFailedImageLoading() {
+        let sut = makeSUT()
+        
+        sut.display(feedWithFailedImageLoading())
+        
+        record(snapshot: sut.snapshot(), named: "FEED_WITH_FAILED_IMAGE_LOADING")
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT() -> FeedViewController {
@@ -61,6 +69,20 @@ class FeedSnapshotTests: XCTestCase {
                 location: "Garth Pier",
                 image: UIImage.make(withColor: .green)
             )
+        ]
+    }
+    
+    private func feedWithFailedImageLoading() -> [ImageStub] {
+        return [
+            ImageStub(
+                description: nil,
+                location: "Cannon Street, London",
+                image: nil
+            ),
+            ImageStub(
+                description: nil,
+                location: "Brighton Seafront",
+                image: nil)
         ]
     }
     
@@ -113,6 +135,8 @@ private extension FeedViewController {
         display(cells)
     }
 }
+
+// Acima chama display com um array de ImageStub qur cria viewModels com eles. Em seguida para cada stub cria um cellController com o stub como delegate. Isso faz com que o metodo didRequestImage() seja chamado nos stub. Ao mesmo tempo seta a propriedade controller do stub como o cellController criado, ai quando didRequestImage() é chamado ele chama display(viewModel) no cell controller. Por fim chama display(cells) em FeedViewController que apresenta os cellController na tela, fechando o ciclo.
 
 private class ImageStub: FeedImageCellControllerDelegate {
     let viewModel: FeedImageViewModel<UIImage>
